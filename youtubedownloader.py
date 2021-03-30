@@ -3,7 +3,7 @@ import tkinter as tk
 from playsound import playsound
 
 WINDOW_WIDTH = 500
-WINDOW_HEIGHT = 150
+WINDOW_HEIGHT = 120
 WINDOW_TITLE = "YouTube Downloader"
 BUTTON_CLICK_SOUND = "clicks.wav" # Make sure its in .wav format
 
@@ -15,25 +15,26 @@ class YoutubeDownloader:
         self.window.geometry("{}x{}".format(WINDOW_WIDTH,WINDOW_HEIGHT))
         self.window.configure(bg="#b0c2ff")
         self.window.title(WINDOW_TITLE)
+        self.window.iconbitmap("youtube.ico")
         
         # Create Labels
-        self.link_label = tk.Label(self.window, text = "Download Link")
+        self.link_label = tk.Label(self.window, text = "Download Link", width = 15)
         self.link_label.grid(column = 0, row = 0) # Puts in top left 
-        self.name_label = tk.Label(self.window, text = "Save File As..")
+        self.name_label = tk.Label(self.window, text = "Save File As..", width = 15)
         self.name_label.grid(column = 0, row = 1) # Puts in top left 1 down 
-        self.path_label = tk.Label(self.window, text = "Save File Path")
+        self.path_label = tk.Label(self.window, text = "Save File Path", width = 15)
         self.path_label.grid(column = 0, row = 2) # Puts in top left 2 down 
-        self.ext_label = tk.Label(self.window, text = "File Extension")
+        self.ext_label = tk.Label(self.window, text = "File Extension", width = 15)
         self.ext_label.grid(column = 0, row = 3) # Puts in top left 3 down
         
         # Create Entry Paths
-        self.link_entry = tk.Entry(master = self.window, width = 40)
+        self.link_entry = tk.Entry(master = self.window, width = 65)
         self.link_entry.grid(column = 1, row = 0)
-        self.name_entry = tk.Entry(master = self.window, width = 40)
+        self.name_entry = tk.Entry(master = self.window, width = 65)
         self.name_entry.grid(column = 1, row = 1)
-        self.path_entry = tk.Entry(master = self.window, width = 40)
+        self.path_entry = tk.Entry(master = self.window, width = 65)
         self.path_entry.grid(column = 1, row = 2)
-        self.ext_entry = tk.Entry(master = self.window, width = 40)
+        self.ext_entry = tk.Entry(master = self.window, width = 65)
         self.ext_entry.grid(column = 1, row = 3)
         
         # Create Download Button 
