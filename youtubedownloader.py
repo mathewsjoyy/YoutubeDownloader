@@ -4,7 +4,7 @@ from playsound import playsound
 
 WINDOW_WIDTH = 500
 WINDOW_HEIGHT = 120
-WINDOW_TITLE = "YouTube Downloader"
+WINDOW_TITLE = "YouTube Video Downloader"
 BUTTON_CLICK_SOUND = "clicks.wav" # Make sure its in .wav format
 
 class YoutubeDownloader:
@@ -13,7 +13,7 @@ class YoutubeDownloader:
         # Define the format of the GUI
         self.window = tk.Tk()
         self.window.geometry("{}x{}".format(WINDOW_WIDTH,WINDOW_HEIGHT))
-        self.window.configure(bg="#b0c2ff")
+        self.window.configure(bg="#FF0000")
         self.window.title(WINDOW_TITLE)
         self.window.iconbitmap("youtube.ico")
         
